@@ -1,0 +1,13 @@
+.container{
+    width: 100%;
+    background-color: #FFFF99;
+    border-radius: 2%;
+    margin-top: 1%;
+  }
+.post{
+  font-size: 1.2em;
+}
+
+.question{
+  font-size: 1.3em;
+}

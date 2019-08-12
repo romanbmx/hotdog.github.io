@@ -1,0 +1,30 @@
+.container{
+    width: 100%;
+    background-color: #FFFF99;
+    border-radius: 2%;
+    margin-top: 1%;
+  }
+
+button{
+  margin-right: 1%;
+}
+
+.btn-sm{
+  font-size: 0.8em;
+  padding: 4px;
+  line-height: 8px;
+}
+
+.alert {
+  width: 35%;
+}
+
+#ingredient{
+  width: 35%;
+}
+
+.hotdogquestion{
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  color: #6D351A;
+}

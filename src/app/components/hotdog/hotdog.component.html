@@ -1,0 +1,78 @@
+<div class="container">
+
+<br>
+
+  <h5 class="hotdogquestion">Виберіть Хот Дог:</h5>
+    <button class="btn btn-danger" (click)="hotdogSelect('Класичний')">Класичний </button>
+    <button class="btn btn-primary" (click)="hotdogSelect('Французький')">Французький </button>
+    <button class="btn btn-success" (click)="hotdogSelect('Мисливський')">Мисливський </button>
+    <button class="btn btn-info" (click)="hotdogSelect('В лаваші')">Лаваш </button>
+    <button class="btn btn-warning" (click)="hotdogSelect('Подвійний')">Подвійний </button>
+
+  <br><br>
+
+  <h5 class="hotdogquestion">{{fastfood}}: {{type}}</h5>
+
+  <div class="alert alert-success">
+    З чого зроблений <b>{{type}}</b> {{fastfood}}?
+    <ul>
+      <li>Булка: <strong>{{ingredients.roll}}</strong></li>
+      <li>Сосиска: <strong>{{ingredients.sausage}}</strong></li>
+      <li>Огірок: <strong>{{ingredients.cucumber}}</strong></li>
+      <li>Помідор: <strong>{{ingredients.tomato}}</strong></li>
+      <li>Капуста: <strong>{{ingredients.cabbage}}</strong></li>
+      <li>Морква: <strong>{{ingredients.carrot}}</strong></li>
+    </ul>
+    <h5 class="hotdogquestion">Ціна: {{price}}</h5>
+    <a href="http://localhost:4200/about"><button class="btn btn-primary">Замовити</button></a>
+
+  </div>
+
+  <br>
+
+  <h5 class="hotdogquestion">Поміняй склад Хот Дога</h5>
+  <button class="btn btn-success" (click)="showEdit()">Редагувати</button>
+  <form *ngIf=isEdit>
+    <br>
+    <div class="form-group">
+      <input id="ingredient" type="text" placeholder="Яку булочку хочете?" class="form-control"
+      [(ngModel)]="ingredients.roll" name="roll">
+      <br>
+      <input id="ingredient" type="text" placeholder="Яку сосиску хочете?" class="form-control"
+      [(ngModel)]="ingredients.sausage" name="sausage">
+      <br>
+      <input id="ingredient" type="text" placeholder="Добавити огірок?" class="form-control"
+      [(ngModel)]="ingredients.cucumber" name="cucumber">
+      <br>
+      <input id="ingredient" type="text" placeholder="Добавити помідор?" class="form-control"
+      [(ngModel)]="ingredients.tomato" name="tomato">
+      <br>
+      <input id="ingredient" type="text" placeholder="Добавити капусту?" class="form-control"
+      [(ngModel)]="ingredients.cabbage" name="cabbage">
+      <br>
+      <input id="ingredient" type="text" placeholder="Добавити моркву?" class="form-control"
+      [(ngModel)]="ingredients.carrot" name="carrot">
+    </div>
+  </form>
+
+  <div><br></div>
+
+  <form (submit)="addIng(ingredient.value)">
+    <div class="form-group">
+      <label for="ingredient"><h5 class="hotdogquestion">Додаткові інгридієнти</h5></label>
+      <input type="text" id="ingredient" placeholder="Чого ще бажаєте?" class="form-control" #ingredient>
+      <br>
+      <button type="submit" class="btn btn-outline-primary">Добавити</button>
+    </div>
+  </form>
+
+  <h5 class="hotdogquestion">Додатково</h5>
+  <div class="alert alert-warning">
+    <ul>
+      <li *ngFor="let ing of additionaly">{{ing}} <button class="btn btn-warning btn-sm" (click)="deleteIng(ing)">x</button></li>
+    </ul>
+  </div>
+
+  <br>
+
+</div>

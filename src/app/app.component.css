@@ -1,0 +1,57 @@
+.all{
+  background-color: 	#00FFFF;
+  background-image: url(../img/hotdog.png);
+  background-size: 5%;
+}
+
+#logo{
+  font-family: Comic Sans MS;
+  font-size: 3.0em;
+  font-weight: bold;
+  margin-left: 14%;
+  float: left;
+}
+
+#logohover:hover{
+  text-decoration: none;
+  color: red;
+}
+
+ header{
+   width: 100%;
+   background-color: #F4C430;
+   padding-top: 1%;
+   padding-bottom: 2%;
+ }
+
+ #head{
+   font-family: Comic Sans MS;
+   margin-left: 30%;
+   font-size: 1.5em;
+   font-weight: bold;
+
+ }
+
+ #head:hover{
+   text-decoration: none;
+   color: red;
+ }
+
+ #about{
+   font-family: Comic Sans MS;
+   margin-left: 3%;
+   font-size: 1.5em;
+   font-weight: bold;
+ }
+
+#about:hover{
+  text-decoration: none;
+  color: red;
+}
+
+ footer{
+	width: 100%;
+  background-color: #EEDC82;
+  padding-bottom: 1%;
+  padding-left: 15%;
+}
